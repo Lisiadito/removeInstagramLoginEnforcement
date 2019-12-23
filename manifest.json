@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2, 
+  "name": "Remove Instagram login pop up",
+  "version": "0.1.0",
+  "description": "Removes the login pop up on Instagram when scrolling through a profile without beeing logged in.", 
+  "content_scripts": [{
+    "js": ["content.js"],
+    "matches": ["https://www.instagram.com/*"]
+  }]
+}
