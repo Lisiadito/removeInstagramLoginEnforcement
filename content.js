@@ -18,3 +18,11 @@ window.addEventListener('load', event => {
 
     observer.observe(document.body, { childList: true, attributes: true })
 })
+
+document.body.addEventListener('click', e => {
+    if (e.target.nodeName !== 'UL') {
+        return
+    }
+    e.preventDefault();
+    location.href = e.target.parentElement.parentElement.href;
+})
